@@ -34,9 +34,11 @@ function App() {
     {postings.map((posting) => {
       return (
         <div>
-        <h1>{posting.title}</h1>
-        <h2>{posting.author}</h2>
-        <h3>{posting.phone}</h3>
+        <h3>{posting.name}</h3>
+        <h3>{posting.neighborhood}</h3>
+        <h3>{posting.crime_type}</h3>
+        <h3>{posting.short_desc}</h3>
+        <h3>{posting.cross_street}</h3>
         <button onClick={async () => {
           //Make delete request
           await fetch("http://localhost:3000/postings/" + posting.id, {
