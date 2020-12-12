@@ -13,7 +13,7 @@ class App extends React.Component {
 
   handleAdd = (event, formInputs) => {
     event.preventDefault();
-    fetch("http://localhost:3000/postings", {
+    fetch("https://community-watch-backend.herokuapp.com/postings", {
       body: JSON.stringify(formInputs),
       method: "POST",
       headers: {
@@ -32,7 +32,7 @@ class App extends React.Component {
   };
 
   handleDelete = (deletedPosting) => {
-    fetch(`http://localhost:3000/postings/${deletedPosting.id}`, {
+    fetch(`https://community-watch-backend.herokuapp.com/postings/${deletedPosting.id}`, {
       method: "DELETE",
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -51,7 +51,7 @@ class App extends React.Component {
   handleUpdate = (event, formInputs) => {
     event.preventDefault();
     console.log("in it to win it");
-    fetch(`http://localhost:3000/postings/${formInputs.id}`, {
+    fetch(`https://community-watch-backend.herokuapp.com/postings/${formInputs.id}`, {
       body: JSON.stringify(formInputs),
       method: "PUT",
       headers: {
@@ -70,7 +70,7 @@ class App extends React.Component {
   }
 
   getPostings = () => {
-    fetch("http://localhost:3000/postings")
+    fetch("https://community-watch-backend.herokuapp.com/postings")
       .then((response) => response.json())
       .then((json) => this.setState({ postings: json }))
       .catch((error) => {
