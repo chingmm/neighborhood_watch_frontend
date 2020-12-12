@@ -1,7 +1,10 @@
 import React from "react";
-import Aside from "./components/Aside";
+import TopMain from "./components/TopMain";
 import Header from "./components/Header";
 import Main from "./components/Main";
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 class App extends React.Component {
   state = {
@@ -57,7 +60,6 @@ class App extends React.Component {
       },
     })
       .then((updatedPosting) => {
-        // go wild
         this.getPostings();
       })
       .catch((error) => console.log(error));
@@ -79,15 +81,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="container">
+        <Container fluid>
+          <Row>
           <Header />
-          <Aside handleSubmit={this.handleAdd} />
+          <TopMain handleSubmit={this.handleAdd} />
           <Main
             postings={this.state.postings}
             handleDelete={this.handleDelete}
             handleUpdate={this.handleUpdate}
           />
-        </div>
+          </Row>
+        </Container>
       </div>
     );
   }

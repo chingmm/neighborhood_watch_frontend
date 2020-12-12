@@ -1,13 +1,13 @@
 import React from 'react'
 import Form from './Form.js'
 
-function Aside(props) {
+function TopMain(props) {
     return (
-      <aside>
-        <h1>Aside</h1>
+      <div>
+        <h1>Submit a New Post</h1>
         <Form handleSubmit={props.handleSubmit}/>
-      </aside>
+      </div>
     )
 }
 
-export default Aside
+export default TopMain
