@@ -25,3 +25,6 @@ A web app for communities to post suspicious activity (i.e. theft, shootings, et
 - With more data, add a dropdown feature for filtering for specific Chicago neighborhoods
 - Integrate longitude/latitude data that should be available in the gem mentioned above with Google Maps API to show location of crime/suspicious activity on a map
 - Integrate a heat map to show which neighborhoods have high activity of postings occurring to give an idea to the user of potentially dangerous areas
+
+# Link to Backend
+https://github.com/chingmm/neighborhood_watch_backend
