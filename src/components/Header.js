@@ -1,7 +1,5 @@
 import React from 'react'
-import Image from 'react-bootstrap/Image'
 import Figure from 'react-bootstrap/Figure'
-import FigureImage from 'react-bootstrap/FigureImage'
 
 function Header(props) {
     return (
