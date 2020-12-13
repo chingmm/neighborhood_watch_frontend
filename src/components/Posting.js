@@ -1,5 +1,6 @@
 import React from "react";
 import Form from "./Form.js";
+import Button from 'react-bootstrap/Button'
 
 class Posting extends React.Component {
   state = {
@@ -34,8 +35,8 @@ class Posting extends React.Component {
             <h3>{posting.crime_type}</h3>
             <h3>{posting.cross_street}</h3>
             <p>{posting.short_desc}</p>
-            <button onClick={() => handleDelete(posting)}>Delete</button>
-            <button onClick={this.toggleForm}>Edit</button>
+            <Button variant="dark" onClick={() => handleDelete(posting)}>Delete</Button>
+            <Button variant="dark" onClick={this.toggleForm}>Edit</Button>
           </div>
         )}
       </>

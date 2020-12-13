@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 class App extends React.Component {
   state = {
@@ -79,15 +80,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Container fluid>
+        <Container fluid="md">
           <Row>
-          <Header />
-          <TopMain handleSubmit={this.handleAdd} />
-          <Main
-            postings={this.state.postings}
-            handleDelete={this.handleDelete}
-            handleUpdate={this.handleUpdate}
-          />
+            <Col>
+              <Header />
+              <TopMain handleSubmit={this.handleAdd} />
+              <Main
+                postings={this.state.postings}
+                handleDelete={this.handleDelete}
+                handleUpdate={this.handleUpdate}
+              />
+              </Col>
           </Row>
         </Container>
       </div>

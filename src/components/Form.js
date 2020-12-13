@@ -51,7 +51,7 @@ class Form extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <Input
           handleChange={this.handleChange}
-          name={"name"}
+          name={"Your Name"}
           placeholder={"Your Name (Feel Free to say Anonymous)"}
           type={"text"}
           value={this.state.name}
@@ -59,37 +59,38 @@ class Form extends React.Component {
         />
         <Input
           handleChange={this.handleChange}
-          name={"neighborhood"}
-          placeholder={"Neighborhood"}
+          name={"Neighborhood"}
+          placeholder={"ex: Bridgeport"}
           type={"text"}
           value={this.state.neighborhood}
           id={"neighborhood"}
         />
         <Input
           handleChange={this.handleChange}
-          name={"crime_type"}
-          placeholder={"Crime Type"}
+          name={"Crime Type"}
+          placeholder={"ex: Theft"}
           type={"text"}
           value={this.state.crime_type}
           id={"crime_type"}
         />
         <Input
           handleChange={this.handleChange}
-          name={"short_desc"}
-          placeholder={"Short Description"}
+          name={"Short Description"}
+          placeholder={"Short Description of Event"}
           type={"text"}
           value={this.state.short_desc}
           id={"short_desc"}
         />
         <Input
           handleChange={this.handleChange}
-          name={"cross_street"}
+          name={"Cross Street"}
           placeholder={"Cross Street"}
           type={"text"}
           value={this.state.cross_street}
           id={"cross_street"}
         />
-        <input
+        <div></div>
+        <input className="submit-post"
           type="submit"
           value={this.props.posting ? "Update Post" : "Add Post"}
         />
